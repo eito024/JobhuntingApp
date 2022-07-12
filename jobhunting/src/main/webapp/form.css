@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+header{
+  margin-top: 30px;
+  color: #43A047;
+}
+hr{
+  border-width: 3px;
+  border-color: #43A047;
+}
+h1{
+  font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+  text-align: center;
+}
+.align-light{
+    text-align: right;
+}
+.form-group{
+  margin-bottom: 35px;
+}
+footer p{
+  text-align: center;
+}
+input:required{
+  background: #ffcdd2;
+}
+input[type="email"]:invalid{
+  background: #ffcdd2;
+}
+input:valid{
+  background: transparent;
+}
+input:focus{
+  background: #DCEDC8;
+}
+* {
+  box-sizing: border-box;
+}
+.headerdiv{
+  background-color: #32cd32;
+}
+body {
+  font-family:'Avenir','Helvetica, Neue','Helvetica','Arial';
+  margin:0;  /*ヘッダーの上部の余白をなくす*/
+}
+
+.regist{
+	text-align:center;
+	border:solid;
+	width:50%;
+	border-color:#666666;
+	margin:auto;
+	
+}
+header{
+  font-weight:bold;  /*太字設定*/
+  display: flex;
+  width: 100%;
+  height: 50%;
+  background-color: #87cefa;
+  align-items: center; /*ボタンの縦の長さをそろえる*/
+  margin-bottom:5px; /*ヘッダーからページ内容までの間をあける*/
+  padding:10px; /*ヘッダー内のウィンドウからの距離*/
+  justify-content: space-around;  /*ボタンの間隔を開ける*/
+}
+.logo{
+  margin-top:0; /*ヘッダーの上部の余白をなくす*/
+  cursor: pointer;   /*カーソルを合わせたときに矢印から指マークに変わる*/
+}
+header.div{
+  cursor: pointer;   /*カーソルを合わせたときに矢印から指マークに変わる*/
+  list-style: none;  /*リストの点を消す*/
+  display: flex;  /*ボタンを横並びにする*/
+  justify-content: space-around;  /*ボタンの間隔を開ける*/
+  font-size:100px;
+  height:100%;
+  width:50%;
+}
+.hedbtn {
+  display: inline-block; 
+  bottom:10px;
+  line-height:300%;  /*ボタンの上下の間隔をあける*/
+}
+.headerbutton a{
+  text-decoration: none;  /*ボタンのリンク（文字の下に出るアンカー線）を消す*/
+  border: 1px solid #282828;   /*ボタンの枠線*/
+  background-color: #32cd32;
+  color: #fff;
+  font-size: 100%;
+  text-align:center;
+  padding:10px;
+  left:20%;
+  flex-basis: auto; /* flexアイテムの幅を自動で調整 */
+}
+.hedclose{
+  text-decoration: none;  /*ボタンのリンク（文字の下に出るアンカー線）を消す*/
+  border: 1px solid #282828;   /*ボタンの枠線*/
+  background-color: #32cd32;
+  color: #fff;
+  font-size: 100%;
+  text-align:center;
+  padding:10px;
+  left:5px;
+  position: fixed; /*ボタンの位置調整に使用*/
+}
+/*ここからトップへ遷移するボタンの設定*/
+.movtp{
+  text-decoration: none;  /*ボタンのリンク（文字の下に出るアンカー線）を消す*/
+  position: fixed;  /*ボタンの位置調整に使用*/
+  bottom: 20px;
+  right: 20px;
+  font-size: 120%;
+  display: block;
+  color: #fff;
+  width: 3.3rem;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #282828;   /*ボタンの枠線*/
+  background-color: #32cd32;
+  text-transform: uppercase;
+}
+
+.movtp:hover {
+    color: red;
+    background-color: #999;
+    text-decoration: none;
+}
+
+label {
+  display: block;
+}
+
+/*.required:after {
+  margin-left: 1.0em;
+  padding: 0px 6px 0px 6px;
+  border-radius: 4px;
+  font-size: 0.6em;
+  color: white;
+  background-color: #C44;
+  content: "必須";
+}*/
+
+
+label.required:after {
+  content: "必須";
+  background-color: #f0ad4e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 10px;
+  padding: 3px 7px;
+  margin: 0px 5px;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+p.required:after {
+  content: "必須";
+  background-color: #f0ad4e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 10px;
+  padding: 3px 7px;
+  margin: 0px 5px;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.submitbutton{
+	padding: 3px 7px;
+}
+
+/*ここまでトップへ遷移するボタンの設定*/

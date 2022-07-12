@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>header</title>
+</head>
+<script src="../共通/js/jquery-2.1.4.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/header.css">
+<body>
+<!-- ここからヘッダー -->
+<header>
+<div><a href="../企業情報機能/BeforeLoginTop.html" class="logo">  <!-- href内に遷移先を書く -->
+   <img src="../共通/logo.png"  
+   alt="サイトのロゴ:クリックするとトップページへ遷移します" 
+   title="クリックするとトップページへ遷移します" 
+   width="500px" height="50%">
+</a>  
+</div>
+<div class="headerbutton">
+  <a href=""><span class="hedbtn">ログイン</span></a>        <!-- href内に遷移先を書く -->
+  <a href=""><span class="hedbtn">ログアウト</span></a>      <!-- href内に遷移先を書く -->
+  <a href=""><span class="hedbtn">マイページ</span></a>      <!-- href内に遷移先を書く -->
+  <a href=""><span class="hedbtn">企業一覧</span></a>        <!-- href内に遷移先を書く -->
+  <a href=""><span class="hedbtn">ブックマーク</span></a>    <!-- href内に遷移先を書く -->
+  <a href=""><span class="hedbtn">パスワード変更</span></a>  <!-- href内に遷移先を書く -->
+  <a href=""><span class="hedbtn">申し込み</span></a>        <!-- href内に遷移先を書く -->
+  <a href="JavaScript:function;"  id="openModal"><img src="../共通/絞り込み.png"   class="hedimg" alt="絞り込み:クリックすると絞り込み"  title="" width="50px" height="50px"></a> <!-- href内に遷移先を書く -->
+</div>
+<!-- モーダルエリアここから -->
+<section id="modalArea" class="modalArea">
+  <div id="modalBg" class="modalBg"></div>
+  <div class="modalWrapper">
+    <div class="modalContents">
+    <!-- ポップアップの中身ここから -->
+      <!--  ここから-->
+	  <div class="puldown">  
+	    <form action="BusinessListSearchServlet"method="get">
+	    <div class="content">
+	      <p>絞り込み</p>
+	    </div>
+	    <div class="content">
+		  <select class="same-width-list" name="selectludustry">
+		    <option value="">業種</option>
+		    <option value="情報処理サービス">情報処理サービス</option>
+		    <option value="通信">通信</option>
+		    <option value="ソフトウェア">ソフトウェア</option>
+		    <option value="ハードウェア">ハードウェア</option>
+		    <option value="インターネット・Web">インターネット・Web</option>
+		  </select>
+	    </div>
+	    <div class="content">
+		  <select class="same-width-list" name="selectreceiptfield">
+		    <option value="">求人分野</option>
+		    <option value="SE・PG">SE・FG</option>
+		    <option value="運用">SE・FG,運用</option>
+		    <option value="インフラ">SE・FG,インフラ</option>
+		    <option value="WEB">SE・FG,WEB</option>
+		  </select>
+	    </div>
+	    <div class="content">
+		  <select class="same-width-list" name="selectlocation">
+		    <option value="">所在地</option>
+		    <option value="北海道">北海道</option>
+		    <option value="青森">青森</option>
+		    <option value="岩手">岩手</option>
+		    <option value="宮城">宮城</option>
+		    <option value="秋田">秋田</option>
+		    <option value="山形">山形</option>
+		    <option value="福島">福島</option>
+		    <option value="茨城">茨城</option>
+		    <option value="栃木">栃木</option>
+		    <option value="群馬">群馬</option>
+		    <option value="埼玉">埼玉</option>
+		    <option value="千葉">千葉</option>
+		    <option value="東京">東京</option>
+		    <option value="神奈川">神奈川</option>
+		    <option value="新潟">新潟</option>
+		    <option value="富山">富山</option>
+		    <option value="石川">石川</option>
+		    <option value="福井">福井</option>
+		    <option value="山梨">山梨</option>
+		    <option value="長野">長野</option>
+		    <option value="岐阜">岐阜</option>
+		    <option value="静岡">静岡</option>
+		    <option value="愛知">愛知</option>
+		    <option value="三重">三重</option>
+		    <option value="滋賀">滋賀</option>
+		    <option value="京都">京都</option>
+		    <option value="大阪">大阪</option>
+		    <option value="兵庫">兵庫</option>
+		    <option value="奈良">奈良</option>
+		    <option value="和歌山">和歌山</option>
+		    <option value="鳥取">鳥取</option>
+		    <option value="島根">島根</option>
+		    <option value="岡山">岡山</option>
+		    <option value="広島">広島</option>
+		    <option value="山口">山口</option>
+		    <option value="徳島">徳島</option>
+		    <option value="香川">香川</option>
+		    <option value="愛媛">愛媛</option>
+		    <option value="高知">高知</option>
+		    <option value="福岡">福岡</option>
+		    <option value="佐賀">佐賀</option>
+		    <option value="長崎">長崎</option>
+		    <option value="大分">大分</option>
+		    <option value="熊本">熊本</option>
+		    <option value="宮崎">宮崎</option>
+		    <option value="鹿児島">鹿児島</option>
+		    <option value="沖縄">沖縄</option>
+		   </select>
+	    </div>
+        <div class="content">
+	      <select class="same-width-list" name="selectexistence">
+		    <option value="">上場の有無</option>
+		    <option value="有">有</option>
+		    <option value="無">無</option>
+		  </select>
+	    </div>
+	    <div class="content">
+		  <input type="submit" value="検索">
+	    </div>
+	  </form>
+	  <form action="BusinessListSearchFreewordServlet"method="get">
+	    <div class="content">
+	      <p>キーワード</p>
+		  <input class="keywordsyou" type="text"name="keyword" size="20"value="">
+	    </div>
+	    <div class="content">
+		  <input type="submit" value="検索">
+	    </div>
+	  </form>
+	  </div>
+      <a href ="" type="submit" class="ok" >検索</a>
+      <a href ="" class="back">戻る</a>
+      <!-- ポップアップの中身ここまで -->
+    </div>
+    <a href =""  class="closeModal">×</a>
+  </div>
+</section>
+<!-- モーダルエリアここまで -->
+</header>
+<!-- ここまでヘッダー -->
+<!-- ここから<nav>の中はページの内容 -->
+<nav>
+<a href="" class="movtp">▲</a> 
+</nav>   
+<!-- ここまで<nav>の中はページの内容 -->
+
+<!-- jQueryここから -->
+<script>
+$(function () {
+	  $('#openModal').click(function(){
+	    $('#modalArea').fadeIn();
+	  });
+	  $('#closeModal,#modalBg,#back').click(function(){
+	    $('#modalArea').fadeOut();
+	  });
+	});
+</script>
+<!-- jQueryここまで -->
+</body>
+</html>

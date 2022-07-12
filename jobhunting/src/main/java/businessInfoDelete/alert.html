@@ -1,0 +1,20 @@
+<button onclick="click_event()">削除</button> 
+<script>
+    function click_event() {
+        
+var detail = confirm('本当に削除しますか？');
+if (detail) {
+    alert('OK');
+    return true;
+} else {
+    this.close();
+    alert('キャンセル');
+    return false;
+}
+    }
+</script>
+
+
+
+
+
